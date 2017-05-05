@@ -1,0 +1,6 @@
+C:\Users\jeremy.lincoln\Documents\C#\PluralSight\C# Fundmentals\Grades\Grades\bin\Debug\Grades.exe.config
+C:\Users\jeremy.lincoln\Documents\C#\PluralSight\C# Fundmentals\Grades\Grades\bin\Debug\Grades.exe
+C:\Users\jeremy.lincoln\Documents\C#\PluralSight\C# Fundmentals\Grades\Grades\bin\Debug\Grades.pdb
+C:\Users\jeremy.lincoln\Documents\C#\PluralSight\C# Fundmentals\Grades\Grades\obj\Debug\Grades.csprojResolveAssemblyReference.cache
+C:\Users\jeremy.lincoln\Documents\C#\PluralSight\C# Fundmentals\Grades\Grades\obj\Debug\Grades.exe
+C:\Users\jeremy.lincoln\Documents\C#\PluralSight\C# Fundmentals\Grades\Grades\obj\Debug\Grades.pdb
