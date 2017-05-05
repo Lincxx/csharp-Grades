@@ -24,9 +24,7 @@ namespace Grades
             synth.Speak(nameof(stats.AverageGrade ) + " " + stats.AverageGrade);
             synth.Speak(nameof(stats.HighestGrade) + " " + stats.HighestGrade);
             synth.Speak(nameof(stats.LowestGrade) + " " + stats.LowestGrade);
-           
-
-                      
+                     
         }
     }
 }
