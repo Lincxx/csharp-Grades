@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Speech.Synthesis;
 
 namespace Grades
 {
@@ -10,6 +11,9 @@ namespace Grades
     {
         static void Main(string[] args)
         {
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.Speak("Hello, this is the grade book program");
+
             GradeBook book = new GradeBook();
             book.AddGrade(91);
             book.AddGrade(89.5f);
@@ -17,9 +21,10 @@ namespace Grades
 
             GradeStatistics stats =  book.ComputeStatistics();
 
-            Console.WriteLine(nameof(stats.AverageGrade ) + " " + stats.AverageGrade);
-            Console.WriteLine(nameof(stats.HighestGrade) + " " + stats.HighestGrade);
-            Console.WriteLine(nameof(stats.LowestGrade) + " " + stats.LowestGrade);
+            synth.Speak(nameof(stats.AverageGrade ) + " " + stats.AverageGrade);
+            synth.Speak(nameof(stats.HighestGrade) + " " + stats.HighestGrade);
+            synth.Speak(nameof(stats.LowestGrade) + " " + stats.LowestGrade);
+           
 
                       
         }
