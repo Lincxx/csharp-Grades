@@ -33,6 +33,8 @@ namespace Grades
         }
 
 
+        public string Name;
+
         public void AddGrade(float grade)
         {
             grades.Add(grade);
