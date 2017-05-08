@@ -16,6 +16,10 @@ namespace Grades
             //synth.Speak("Hello, this is the grade book program");
 
             GradeBook book = new GradeBook();
+
+            book.NameChanged += new NameChangedDelegate(OnNameChanged);
+            book.NameChanged += new NameChangedDelegate(OnNameChanged2);
+
             book.Name = "Jeremy Gradebook";
             book.AddGrade(91);
             book.AddGrade(89.5f);
@@ -44,6 +48,16 @@ namespace Grades
         static void WriteResult(string description, float result)
         {
             Console.WriteLine($"{description}: {result:C}");
+        }
+
+        static void OnNameChanged(string existingName, string newName)
+        {
+            Console.WriteLine($"Grade book changing name from {existingName} to {newName}");
+        }
+
+        static void OnNameChanged2(string existingName, string newName)
+        {
+            Console.WriteLine("****");
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Grades
     public class GradeBook
     {
         private List<float> grades;
-        private string _name;
+        private string _name = "Empty";
         public string Name
         {
             get { return _name; }
@@ -17,10 +17,16 @@ namespace Grades
             {
                 if (!String.IsNullOrEmpty(value))
                 {
+                    if (_name != value)
+                    {
+                        NameChanged(_name, value);
+                    }
                     _name = value;
                 }
             }
         }
+
+        public NameChangedDelegate NameChanged;
 
 
 
