@@ -19,14 +19,18 @@ namespace Grades
                 {
                     if (_name != value)
                     {
-                        NameChanged(_name, value);
+                        NameChangeEventArgs args = new NameChangeEventArgs();
+                        args.ExistingName = _name;
+                        args.NewName = value;
+
+                        NameChanged(this, args);
                     }
                     _name = value;
                 }
             }
         }
 
-        public NameChangedDelegate NameChanged;
+        public event NameChangedDelegate NameChanged;
 
 
 
