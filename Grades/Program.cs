@@ -12,16 +12,21 @@ namespace Grades
     {
         static void Main(string[] args)
         {
+            GradeBook book = CreateGradeBook();
+
+            //GetBookName(book);
+            AddGrades(book);
+            SaveGrades(book);
+            WriteResults(book);
+        }
+
+        private static GradeBook CreateGradeBook()
+        {
 
             //SpeechSynthesizer synth = new SpeechSynthesizer();
             //synth.Speak("Hello, this is the grade book program");
 
-            GradeBook book = new ThrowAwayGradeBook();
-
-            GetBookName(book);
-            AddGrades(book);
-            SaveGrades(book);
-            WriteResults(book);
+            return new ThrowAwayGradeBook();
         }
 
         private static void WriteResults(GradeBook book)
