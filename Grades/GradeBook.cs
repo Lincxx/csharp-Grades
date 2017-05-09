@@ -18,16 +18,19 @@ namespace Grades
             {
                 if (!String.IsNullOrEmpty(value))
                 {
-                    if (_name != value)
-                    {
-                        NameChangeEventArgs args = new NameChangeEventArgs();
-                        args.ExistingName = _name;
-                        args.NewName = value;
-
-                        NameChanged(this, args);
-                    }
-                    _name = value;
+                    throw new ArithmeticException("Name cannot be empty");
                 }
+
+                    if (_name != value)
+                {
+                    NameChangeEventArgs args = new NameChangeEventArgs();
+                    args.ExistingName = _name;
+                    args.NewName = value;
+
+                    NameChanged(this, args);
+                }
+                _name = value;
+
             }
         }
 
@@ -35,7 +38,7 @@ namespace Grades
         {
             for (int i = grades.Count; i > 0; i--)
             {
-                destination.WriteLine(grades[i-1]);
+                destination.WriteLine(grades[i - 1]);
             }
         }
 
@@ -45,19 +48,19 @@ namespace Grades
 
         public GradeBook()
         {
-             grades = new List<float>();
+            grades = new List<float>();
         }
 
         public GradeStatistics ComputeStatistics()
         {
-            GradeStatistics stats =  new GradeStatistics();
-            
+            GradeStatistics stats = new GradeStatistics();
+
             float sum = 0;
             foreach (float grade in grades)
             {
                 stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
                 stats.LowestGrade = Math.Min(grade, stats.LowestGrade);
-                sum += grade;    
+                sum += grade;
             }
 
             stats.AverageGrade = sum / grades.Count();
@@ -66,7 +69,7 @@ namespace Grades
         }
 
 
-      
+
 
         public void AddGrade(float grade)
         {
