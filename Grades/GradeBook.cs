@@ -16,12 +16,12 @@ namespace Grades
             get { return _name; }
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (String.IsNullOrEmpty(value))
                 {
-                    throw new ArithmeticException("Name cannot be empty");
+                    throw new ArgumentException("Name cannot be empty");
                 }
 
-                    if (_name != value)
+                if (_name != value && NameChanged != null)
                 {
                     NameChangeEventArgs args = new NameChangeEventArgs();
                     args.ExistingName = _name;
