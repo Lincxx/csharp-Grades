@@ -9,8 +9,9 @@ namespace Grades
 {
     public class GradeBook
     {
-        private List<float> grades;
+        protected List<float> grades;
         private string _name = "Empty";
+        
         public string Name
         {
             get { return _name; }
@@ -53,6 +54,7 @@ namespace Grades
 
         public GradeStatistics ComputeStatistics()
         {
+            Console.WriteLine("Gradbook");
             GradeStatistics stats = new GradeStatistics();
 
             float sum = 0;

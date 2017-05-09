@@ -16,7 +16,7 @@ namespace Grades
             //SpeechSynthesizer synth = new SpeechSynthesizer();
             //synth.Speak("Hello, this is the grade book program");
 
-            GradeBook book = new GradeBook();
+            GradeBook book = new ThrowAwayGradeBook();
 
             GetBookName(book);
             AddGrades(book);
